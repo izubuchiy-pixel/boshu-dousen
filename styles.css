@@ -389,3 +389,108 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
   .site-footer > .wrap > small { text-align: left; }
   .mobile-cta { position: fixed; z-index: 900; left: 12px; right: 12px; bottom: max(10px, env(safe-area-inset-bottom)); min-height: 54px; display: flex; align-items: center; justify-content: center; gap: 12px; border-radius: 999px; background: var(--gold); color: var(--navy); box-shadow: 0 14px 40px rgba(0,0,0,.25); font-weight: 900; }
 }
+
+
+/* v2.4: Japanese typography and reliable Instagram handoff */
+:where(h1,h2,h3,.hero-card strong,.hero-card small,.button,.price-ticket) {
+  word-break: auto-phrase;
+  overflow-wrap: normal;
+  line-break: strict;
+}
+.hero-title-line { display: block; }
+.hero-title-accent { color: var(--gold-2); }
+.instagram-copy {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.footer-instagram {
+  justify-self: end;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.72);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: clamp(38px, 10.8vw, 48px);
+    line-height: 1.34;
+    letter-spacing: -.045em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  .hero-title-line { display: block; }
+  .hero-title-accent { margin-top: .08em; }
+  .eyebrow { font-size: 11px; letter-spacing: .08em; }
+  .hero-visual {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 38px;
+  }
+  .hero-card,
+  .price-ticket {
+    grid-column: 1 !important;
+    width: 100%;
+  }
+  .hero-card {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    column-gap: 12px;
+    align-items: center;
+    padding: 16px 18px;
+  }
+  .hero-card .card-kicker {
+    grid-row: 1 / span 2;
+    align-self: center;
+    font-size: 11px;
+  }
+  .hero-card strong {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+  .hero-card small {
+    font-size: 11px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+  .price-ticket {
+    margin-top: 2px;
+    transform: none;
+  }
+  .price-ticket > strong { font-size: 34px; }
+  .hero-proof strong { word-break: keep-all; }
+  .section-heading h2,
+  .contact-copy h2,
+  .price-copy h2 {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    line-break: strict;
+    text-wrap: balance;
+  }
+  .problem-card h3,
+  .service-card h3,
+  .work-body h3,
+  .flow-list h3,
+  .assurance-grid h3,
+  .fit-panel h2 {
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  .footer-instagram { justify-self: start; }
+}
