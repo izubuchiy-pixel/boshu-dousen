@@ -23,7 +23,7 @@
 - 公式サイト：https://izubuchiy-pixel.github.io/boshu-dousen/
 - あびこ学習管理塾：https://abiko-gakushukanri.netlify.app/
 - economic_tutoring：https://economic-tutoring.netlify.app/
-- Instagram：https://instagram.com/boshu_dousen
+- Instagram：https://www.instagram.com/boshu_dousen?igsh=ano4ZGYxb25zd3J1&utm_source=qr
 
 【公開前に変更が必要な場合】
 各URLは index.html 内を検索して置換してください。
