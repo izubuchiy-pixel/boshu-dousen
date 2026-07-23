@@ -64,24 +64,7 @@
     });
   }
 
-  const instagramButtons = document.querySelectorAll('.instagram-open');
   const instagramCopyButtons = document.querySelectorAll('[data-copy-instagram]');
-
-  instagramButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const username = button.dataset.instagramUser || 'boshu_dousen';
-      const appUrl = `instagram://user?username=${encodeURIComponent(username)}`;
-      const webUrl = `https://www.instagram.com/${encodeURIComponent(username)}/`;
-      const startedAt = Date.now();
-
-      window.location.href = appUrl;
-      window.setTimeout(() => {
-        if (document.visibilityState === 'visible' && Date.now() - startedAt < 2200) {
-          window.location.href = webUrl;
-        }
-      }, 1200);
-    });
-  });
 
   instagramCopyButtons.forEach(button => {
     button.addEventListener('click', async () => {
@@ -101,7 +84,7 @@
       }
       button.textContent = `${value} をコピーしました`;
       window.setTimeout(() => {
-        button.textContent = '開けない場合はユーザー名をコピー';
+        button.textContent = '開けない場合は @boshu_dousen をコピー';
       }, 2200);
     });
   });

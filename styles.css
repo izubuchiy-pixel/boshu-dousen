@@ -494,3 +494,139 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
   }
   .footer-instagram { justify-self: start; }
 }
+
+/* v2.5 — mobile-first production hardening */
+.instagram-profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  html { scroll-padding-top: 16px; }
+  body { overflow-x: hidden; }
+  .wrap { width: calc(100% - 32px); }
+  .site-header { position: relative; background: var(--navy); }
+  .header-inner { min-height: 66px; }
+  .brand-copy strong { font-size: 15px; }
+  .hero { padding: 48px 0 34px; }
+  .hero-grid { display: flex; flex-direction: column; gap: 34px; }
+  .hero-copy { width: 100%; }
+  .eyebrow { margin-bottom: 20px; }
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(36px, 10.2vw, 46px);
+    line-height: 1.28;
+    letter-spacing: -.055em;
+    word-break: keep-all;
+  }
+  .hero-title-line { display: block; white-space: normal; }
+  .hero-title-accent { margin-top: 6px; }
+  .hero-lead { margin-top: 22px; font-size: 14px; line-height: 1.9; }
+  .hero-actions { margin-top: 24px; }
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+  }
+  .hero-card,
+  .price-ticket {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    box-sizing: border-box;
+  }
+  .hero-card {
+    display: grid;
+    grid-template-columns: 42px minmax(0,1fr);
+    grid-template-rows: auto auto;
+    gap: 2px 10px;
+    padding: 17px 18px;
+  }
+  .hero-card .card-kicker { grid-row: 1 / 3; margin: 0; align-self: center; }
+  .hero-card strong { margin: 0; font-size: 17px; line-height: 1.4; white-space: nowrap; }
+  .hero-card small { font-size: 12px; line-height: 1.55; white-space: nowrap; }
+  .price-ticket { padding: 20px 18px; }
+  .price-ticket > span { font-size: 12px; }
+  .price-ticket > strong { font-size: 36px; line-height: 1.15; }
+  .price-ticket > strong small { font-size: 12px; }
+  .price-ticket > div { display: flex; flex-wrap: wrap; gap: 7px; }
+  .hero-proof { margin-top: 26px; }
+  .hero-proof > div { padding: 18px 4px; }
+
+  .problem, .outcome, .service, .works, .change, .fit, .price, .flow, .assurance, .faq, .about { padding: 68px 0; }
+  .contact { padding: 68px 0 92px; }
+  .section-heading { margin-bottom: 30px; }
+  .section-heading h2,
+  .contact-copy h2,
+  .price-copy h2 {
+    font-size: clamp(30px, 8.3vw, 37px);
+    line-height: 1.35;
+    letter-spacing: -.04em;
+    word-break: keep-all;
+    text-wrap: pretty;
+  }
+  .section-heading p:not(.section-label) { font-size: 14px; line-height: 1.85; }
+  .problem-grid, .service-grid, .assurance-grid { gap: 12px; }
+  .problem-card, .service-card, .assurance-grid article { padding: 22px 20px; }
+  .problem-card h3, .service-card h3, .assurance-grid h3, .flow-list h3, .work-body h3 {
+    font-size: 18px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+  .problem-card p, .service-card p, .assurance-grid p, .flow-list p { font-size: 13px; line-height: 1.8; }
+  .outcome-route article { grid-template-columns: 58px minmax(0,1fr); gap: 10px; }
+  .outcome-route article h3 { font-size: 17px; word-break: keep-all; }
+  .work-preview { height: 275px; }
+  .mini-site { padding: 24px 20px; }
+  .mini-site strong { font-size: 24px; line-height: 1.4; }
+  .work-body { padding: 12px 20px 24px; }
+  .change-table { border-radius: 18px; }
+  .change-row > div { padding: 17px 16px; line-height: 1.7; }
+  .fit-panel { padding: 26px 20px; }
+  .fit-panel h2 { font-size: 26px; line-height: 1.45; }
+  .fit-panel li { line-height: 1.65; }
+  .price-card { padding: 24px 18px; }
+  .price-main { align-items: flex-end; }
+  .price-main strong { font-size: clamp(52px, 15vw, 66px); letter-spacing: -.06em; }
+  .price-card-top { gap: 10px; }
+  .extra-cost > div { padding: 22px 20px; }
+  .flow-list { gap: 10px; }
+  .flow-list li { grid-template-columns: 44px minmax(0,1fr); gap: 12px; padding: 19px 17px; }
+  .flow-list li > span { width: 42px; height: 42px; font-size: 12px; }
+  .faq-list summary { padding: 20px 46px 20px 18px; font-size: 15px; line-height: 1.6; }
+  .faq-list details p { padding: 0 18px 20px; font-size: 13px; line-height: 1.8; }
+  .about-mark { height: 210px; }
+  .contact-card { padding: 24px 18px; }
+  .contact-card h3 { font-size: 21px; line-height: 1.45; }
+  .message-box { font-size: 13px; line-height: 1.7; }
+  .button { min-height: 54px; padding: 14px 18px; font-size: 15px; }
+  .instagram-profile-link { min-height: 44px; }
+  .instagram-copy { min-height: 44px; font-size: 12px; }
+  .footer-grid { gap: 20px; }
+  .site-footer nav { gap: 12px 18px; }
+  .mobile-cta { left: 14px; right: 14px; min-height: 56px; }
+}
+
+@media (max-width: 360px) {
+  .hero h1 { font-size: 34px; }
+  .hero-card strong, .hero-card small { white-space: normal; }
+  .price-main strong { font-size: 50px; }
+}
+
+@media print {
+  .mobile-cta, .site-header, .menu-button { display: none !important; }
+  * { break-inside: avoid; }
+}
