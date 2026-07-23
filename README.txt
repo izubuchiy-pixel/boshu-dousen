@@ -1,29 +1,20 @@
-募集導線室 公式サイト v2.8
+募集導線室 公式サイト v2.9（GitHubブラウザアップロード対応）
 
 【公開方法】
-1. このフォルダ内のファイルをすべてZIPにする
-2. Netlifyの対象サイトを開く
-3. Deploys → Deploy manually からZIPをアップロード
-4. 公開後に以下を確認
-   - あびこ学習管理塾の制作事例リンク
-   - economic_tutoringの制作事例リンク
-   - Instagramプロフィールへのリンク
-   - 「相談文をコピーする」ボタン
-   - スマートフォン表示
+1. このZIPを解凍する
+2. 中身をすべてGitHubリポジトリのルートへアップロードする
+3. Commit changes
+4. GitHub Pagesのデプロイ完了後に公開URLを確認する
+
+【重要】
+画像・faviconも含め、すべてルート直下に配置する構成です。
+SafariからGitHubへアップロードした際にフォルダ階層が保持されなくても動作します。
 
 【主要ファイル】
-- index.html：本文・構成
-- styles.css：デザイン・レスポンシブ表示
-- script.js：メニュー、表示アニメーション、相談文コピー
-- netlify.toml：公開設定・セキュリティヘッダー
-- robots.txt / sitemap.xml：検索エンジン向け
-- assets/og-image.png：SNS共有画像
-
-【現在設定済みURL】
-- 公式サイト：https://izubuchiy-pixel.github.io/boshu-dousen/
-- あびこ学習管理塾：https://abiko-gakushukanri.netlify.app/
-- economic_tutoring：https://economic-tutoring.netlify.app/
-- Instagram：https://www.instagram.com/boshu_dousen?igsh=ano4ZGYxb25zd3J1&utm_source=qr
-
-【公開前に変更が必要な場合】
-各URLは index.html 内を検索して置換してください。
+- index.html
+- styles.css
+- script.js
+- case-abiko.png
+- case-economic.png
+- og-image.png
+- favicon.svg
