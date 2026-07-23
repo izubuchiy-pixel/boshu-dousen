@@ -20,7 +20,7 @@
 - assets/og-image.png：SNS共有画像
 
 【現在設定済みURL】
-- 公式サイト：https://boshu-dousen.netlify.app/
+- 公式サイト：https://izubuchiy-pixel.github.io/boshu-dousen/
 - あびこ学習管理塾：https://abiko-gakushukanri.netlify.app/
 - economic_tutoring：https://economic-tutoring.netlify.app/
 - Instagram：https://instagram.com/boshu_dousen
