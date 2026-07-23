@@ -706,3 +706,106 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
   .hero h1 { font-size: 33px; }
   .mobile-line { white-space: normal; }
 }
+
+/* v2.7 — strict mobile containment and readable Japanese line breaks */
+@media (max-width: 640px) {
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+  body { padding-bottom: 0; }
+  main, section, header, footer, .wrap, .header-inner,
+  .hero-grid, .hero-copy, .hero-visual, .section-heading,
+  .outcome-grid, .price-grid, .faq-grid, .about-grid, .contact-grid,
+  .problem-grid, .service-grid, .works-grid, .fit-grid,
+  .work-card, .work-body, .fit-panel, .price-card, .contact-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .wrap { width: auto; margin-left: 18px; margin-right: 18px; }
+  .header-inner { width: auto; margin-left: 16px; margin-right: 16px; }
+
+  /* Never force a Japanese phrase beyond the viewport. */
+  h1, h2, h3, p, li, a, button, span, strong, small, summary {
+    max-width: 100%;
+  }
+  .hero h1,
+  .section-heading h2,
+  .contact-copy h2,
+  .price-copy h2,
+  .fit-panel h2,
+  .problem-card h3,
+  .service-card h3,
+  .work-body h3,
+  .flow-list h3,
+  .assurance-grid h3 {
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    text-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 9vw, 39px);
+    line-height: 1.28;
+    letter-spacing: -.045em;
+  }
+  .hero-title-line,
+  .hero-title-accent,
+  .mobile-line {
+    display: block;
+    width: 100%;
+    white-space: normal !important;
+  }
+  .section-heading h2,
+  .contact-copy h2,
+  .price-copy h2 {
+    font-size: clamp(27px, 7.4vw, 33px);
+    line-height: 1.42;
+    letter-spacing: -.035em;
+  }
+  .fit-panel h2 { font-size: 24px; }
+  .problem-card h3,
+  .service-card h3,
+  .work-body h3,
+  .flow-list h3,
+  .assurance-grid h3 { font-size: 17px; line-height: 1.65; }
+
+  .hero-lead,
+  .section-heading p:not(.section-label),
+  .problem-card p,
+  .service-card p,
+  .work-body p,
+  .flow-list p,
+  .assurance-grid p,
+  .about p {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .problem-card, .service-card, .assurance-grid article,
+  .fit-panel, .price-card, .contact-card, .work-card {
+    overflow: hidden;
+  }
+
+  .about-grid { gap: 8px; }
+  .about-mark { height: 190px; }
+  .about-mark span { width: 150px; height: 150px; font-size: 60px; }
+  .about-mark i { width: 210px; }
+  .about-points { gap: 7px; }
+  .about-points span { font-size: 10px; padding: 8px 10px; }
+
+  /* Sticky CTA obscured content and collided with the iOS browser chrome. */
+  .mobile-cta { display: none !important; }
+
+  .global-nav { max-width: 100vw; }
+  body.menu-open { overflow: hidden; }
+}
+
+@media (max-width: 380px) {
+  .wrap { margin-left: 15px; margin-right: 15px; }
+  .hero h1 { font-size: 31px; }
+  .section-heading h2,
+  .contact-copy h2,
+  .price-copy h2 { font-size: 26px; }
+}
