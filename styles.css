@@ -630,3 +630,79 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
   .mobile-cta, .site-header, .menu-button { display: none !important; }
   * { break-inside: avoid; }
 }
+
+
+/* v2.6 — verified mobile viewport, menu and sticky CTA fixes */
+.mobile-line { display: inline; }
+
+@media (max-width: 640px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  .wrap, .header-inner, .hero-grid, .hero-copy, .hero-visual { min-width: 0; max-width: 100%; }
+
+  .site-header { position: sticky; top: 0; z-index: 1200; }
+  .header-inner { width: calc(100% - 28px); min-height: 68px; }
+  .brand { min-width: 0; }
+  .brand-copy small { display: none; }
+  .menu-button { z-index: 1400; flex: 0 0 44px; }
+
+  .global-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    width: 100vw;
+    height: 100dvh;
+    padding: 104px 28px calc(32px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    background: #102d49;
+    backdrop-filter: none;
+  }
+  .global-nav > a {
+    display: block;
+    width: 100%;
+    color: #fff !important;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .global-nav .nav-cta {
+    margin-top: 22px;
+    color: #102d49 !important;
+    background: #d3a335;
+  }
+  body.menu-open .mobile-cta { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+
+  .hero { padding-top: 46px; }
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(34px, 9.5vw, 42px);
+    line-height: 1.26;
+    letter-spacing: -.055em;
+    overflow: visible;
+  }
+  .hero-title-line { width: 100%; }
+  .hero-title-accent { display: block; }
+  .mobile-line { display: block; white-space: nowrap; }
+  .hero-lead { max-width: 100%; }
+
+  .hero-card strong,
+  .hero-card small { white-space: normal; overflow-wrap: anywhere; }
+
+  .mobile-cta {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(18px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  }
+  body.show-mobile-cta .mobile-cta {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 { font-size: 33px; }
+  .mobile-line { white-space: normal; }
+}

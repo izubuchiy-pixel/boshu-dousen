@@ -24,9 +24,13 @@
     navLinks.forEach(link => link.addEventListener('click', closeMenu));
   }
 
-  window.addEventListener('scroll', () => {
+  const updateScrollState = () => {
     if (header) header.classList.toggle('scrolled', window.scrollY > 12);
-  }, { passive: true });
+    document.body.classList.toggle('show-mobile-cta', window.scrollY > Math.min(620, window.innerHeight * 0.72));
+  };
+  window.addEventListener('scroll', updateScrollState, { passive: true });
+  window.addEventListener('resize', updateScrollState, { passive: true });
+  updateScrollState();
 
   const revealItems = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
