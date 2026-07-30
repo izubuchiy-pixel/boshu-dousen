@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://izubuchiy-pixel.github.io/boshu-dousen/sitemap.xml
+Sitemap: https://boshu-dousen.pages.dev/sitemap.xml
