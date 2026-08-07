@@ -86,6 +86,7 @@ ul,ol { margin-top: 0; }
 .button-outline-light { background: transparent; border-color: rgba(255,255,255,.26); color: var(--white); }
 .button-outline-light:hover { border-color: var(--gold); background: rgba(255,255,255,.04); }
 .button-full { width: 100%; }
+.price-card .button + .button { margin-top: 10px; }
 .text-link { font-size: 14px; font-weight: 800; color: rgba(255,255,255,.75); border-bottom: 1px solid rgba(255,255,255,.24); padding-bottom: 4px; }
 .microcopy { margin: 18px 0 0; color: rgba(255,255,255,.52); font-size: 12px; }
 .hero-visual { min-height: 550px; position: relative; }
