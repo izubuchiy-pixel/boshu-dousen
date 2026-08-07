@@ -897,3 +897,30 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* v2.9 — privacy and purchase trust */
+.policy-page { min-height: 100vh; background: var(--paper); }
+.policy-header { background: var(--navy); color: var(--white); }
+.policy-header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.policy-back { padding-bottom: 2px; border-bottom: 1px solid rgba(255,255,255,.35); color: rgba(255,255,255,.82); font-size: 13px; font-weight: 800; }
+.policy-main { padding: 84px 0 110px; }
+.policy-article { max-width: 840px; }
+.policy-article h1 { margin-bottom: 20px; font-size: clamp(38px, 6vw, 62px); line-height: 1.3; letter-spacing: -.04em; }
+.policy-lead { margin-bottom: 52px; padding: 24px 26px; border-left: 4px solid var(--gold); background: var(--ivory); color: var(--muted); }
+.policy-article section { padding: 28px 0; border-top: 1px solid var(--line); }
+.policy-article section h2 { margin-bottom: 13px; font-size: 20px; }
+.policy-article section p { margin-bottom: 10px; color: var(--muted); font-size: 14px; }
+.policy-article section ul { margin-bottom: 0; padding-left: 1.4em; color: var(--muted); font-size: 14px; }
+.policy-article section a { color: var(--navy); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+.policy-date { margin: 28px 0; color: var(--muted); font-size: 12px; }
+.policy-footer { padding: 34px 0; }
+
+@media (max-width: 640px) {
+  .policy-header-inner { min-height: 68px; }
+  .policy-header .brand-copy small { display: none; }
+  .policy-back { font-size: 11px; }
+  .policy-main { padding: 56px 0 78px; }
+  .policy-article h1 { font-size: 34px; }
+  .policy-lead { margin-bottom: 36px; padding: 19px 20px; }
+  .policy-article section { padding: 23px 0; }
+}
