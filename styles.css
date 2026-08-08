@@ -914,6 +914,15 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
 .policy-article section a { color: var(--navy); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
 .policy-date { margin: 28px 0; color: var(--muted); font-size: 12px; }
 .policy-footer { padding: 34px 0; }
+.policy-footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.policy-footer nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12px; font-weight: 700; color: rgba(255,255,255,.68); }
+.commerce-list { margin: 0; }
+.commerce-list > div { display: grid; grid-template-columns: minmax(160px, .75fr) minmax(0, 1.6fr); gap: 24px; padding: 17px 0; border-top: 1px solid var(--line); }
+.commerce-list > div:first-child { padding-top: 0; border-top: 0; }
+.commerce-list dt { color: var(--navy); font-size: 13px; font-weight: 900; line-height: 1.8; }
+.commerce-list dd { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.commerce-list dd small { font-size: 12px; }
+.commerce-note { margin-top: 18px; padding: 16px 18px; border-radius: 12px; background: var(--ivory); }
 
 @media (max-width: 640px) {
   .policy-header-inner { min-height: 68px; }
@@ -923,4 +932,6 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
   .policy-article h1 { font-size: 34px; }
   .policy-lead { margin-bottom: 36px; padding: 19px 20px; }
   .policy-article section { padding: 23px 0; }
+  .policy-footer .wrap { align-items: flex-start; flex-direction: column; }
+  .commerce-list > div { grid-template-columns: 1fr; gap: 5px; padding: 15px 0; }
 }
