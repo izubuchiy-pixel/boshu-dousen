@@ -125,6 +125,23 @@ ul,ol { margin-top: 0; }
 .problem-card-accent { background: var(--navy); color: var(--white); border-color: transparent; }
 .problem-card-accent p { color: rgba(255,255,255,.65); }
 
+.diagnosis-preview { padding: 120px 0; }
+.diagnosis-preview-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: center; }
+.diagnosis-preview .section-heading { margin-bottom: 0; }
+.diagnosis-trust { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0; }
+.diagnosis-trust span { padding: 7px 11px; border: 1px solid rgba(16,45,73,.14); border-radius: 999px; background: rgba(255,255,255,.62); font-size: 10px; font-weight: 800; }
+.diagnosis-sample { padding: 28px; border: 1px solid rgba(16,45,73,.12); border-radius: 30px; background: var(--white); box-shadow: var(--shadow); }
+.diagnosis-sample-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 14px; }
+.diagnosis-sample-head span { font-size: 13px; font-weight: 900; }
+.diagnosis-sample-head b { padding: 6px 10px; border-radius: 999px; background: var(--gold); font-size: 10px; }
+.diagnosis-sample article { position: relative; padding: 20px 20px 20px 72px; border-top: 1px solid var(--line); }
+.diagnosis-sample article::before { content: ""; position: absolute; left: 22px; top: 27px; width: 28px; height: 2px; background: var(--gold); }
+.diagnosis-sample article > span { color: var(--gold); font-size: 10px; font-weight: 900; letter-spacing: .08em; }
+.diagnosis-sample h3 { margin: 4px 0 5px; font-size: 18px; line-height: 1.55; }
+.diagnosis-sample p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.diagnosis-sample-action { border-radius: 16px; background: rgba(211,163,53,.08); }
+.diagnosis-sample > small { display: block; margin: 16px 4px 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+
 .outcome { padding: 120px 0; }
 .outcome-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 85px; align-items: center; }
 .outcome-route { padding: 28px; border-radius: 34px; background: var(--white); box-shadow: var(--shadow); }
@@ -287,7 +304,7 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
   .global-nav > a { padding: 15px 4px; border-bottom: 1px solid rgba(255,255,255,.09); font-size: 17px; }
   .global-nav .nav-cta { margin-top: 22px; text-align: center; border-bottom: 0; }
   .hero { padding-top: 128px; }
-  .hero-grid, .outcome-grid, .price-grid, .faq-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-grid, .diagnosis-preview-grid, .outcome-grid, .price-grid, .faq-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .hero-grid { min-height: 0; }
   .hero-visual { min-height: 520px; margin-top: 30px; }
   .hero-proof { grid-template-columns: 1fr 1fr; }
@@ -355,12 +372,16 @@ details p { padding: 0 52px 23px 0; margin: 0; color: var(--muted); font-size: 1
   .hero-proof { grid-template-columns: 1fr; }
   .hero-proof > div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
   .hero-proof > div:last-child { border-bottom: 0; }
-  .problem, .outcome, .service, .works, .change, .fit, .price, .flow, .assurance, .faq, .about { padding: 82px 0; }
+  .problem, .diagnosis-preview, .outcome, .service, .works, .change, .fit, .price, .flow, .assurance, .faq, .about { padding: 82px 0; }
   .contact { padding: 78px 0; }
   .section-heading { margin-bottom: 38px; }
   .section-heading h2 { font-size: 35px; }
   .problem-grid, .service-grid, .flow-list, .assurance-grid { grid-template-columns: 1fr; }
   .problem-card { min-height: auto; }
+  .diagnosis-preview-grid { gap: 38px; }
+  .diagnosis-sample { padding: 20px 16px; border-radius: 22px; }
+  .diagnosis-sample article { padding: 18px 8px 18px 52px; }
+  .diagnosis-sample article::before { left: 10px; top: 25px; width: 24px; }
   .service-card-wide { grid-column: auto; grid-template-columns: 52px 1fr; }
   .outcome-route { padding: 17px; }
   .outcome-route article { grid-template-columns: 63px 1fr; padding: 16px; }
